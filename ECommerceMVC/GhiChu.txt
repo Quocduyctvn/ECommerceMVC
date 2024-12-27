@@ -1,0 +1,18 @@
+============================youtobe thầy HIENLTH CHANEL=======================================
+Câu lệnh chuyển từ database ngược lại vô Visual 
+			Scaffold-DbContext "Data Source=QUOCDUY\QUOCDUY;Initial Catalog=Hshop2023;Integrated Security=True;Trust Server Certificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data -f
+
+Automapper: 
+			cài đặt nuget: AutoMapper.extensions
+
+Cập nhật dữ liệu: (khi chỉ sửa trên database=> cập nhật lại trên code)
+			Scaffold-DbContext "Server=QUOCDUY\QUOCDUY;Database=Hshop2023;Integrated Security=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data
+		=>  thêm câu lệnh ghi đè lên cái cũ 
+			Scaffold-DbContext "Server=QUOCDUY\QUOCDUY;Database=Hshop2023;Integrated Security=True;TrustServerCertificate=True" Microsoft.EntityFrameworkCore.SqlServer -OutputDir Data  -f 
+Paypal:    tạo tài khoản paypal 
+			=> tạo tài khoản ảo trong Testing Tools => tạo ứng dụng 
+			=> vào trong appSetting  cấu hình 
+
+			https://developer.paypal.com/dashboard/applications/sandbox
+*** Nếu tài khoản thật thì ở trang https://developer.paypal.com/ bạn bật chế độ Live (ở toggle Sandbox/Live, default là Sandbox) và tạo App tương tự. Sau đó copy App Id, App Secret vào appsettings.json, chỉnh Mode=Live nhé.
+Chúc bạn thành công!
